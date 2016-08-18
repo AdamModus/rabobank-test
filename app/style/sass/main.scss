@@ -1,0 +1,65 @@
+$rabo-orange: #fd6400;
+$rabo-light-orange: #ffe0cc;
+
+body {
+    padding: 0 2em;
+    font-family: Arial, sans-serif;
+    color: #024457;
+    background: #f2f2f2;
+}
+
+h1 {
+    font-family: Verdana;
+    font-weight: normal;
+    color: $rabo-orange;
+}
+
+h1 span {
+    color: $rabo-orange;
+}
+
+.rabotable {
+    margin: 1em 0;
+    width: 100%;
+    overflow: hidden;
+    background: #FFF;
+    color: #024457;
+    border-radius: 10px;
+    border: 1px solid $rabo-orange;
+    
+    tr {
+        border: 1px solid #D9E4E6;
+    }
+    
+    tr:nth-child(odd) {
+        background-color: $rabo-light-orange;
+    }
+    
+    th, td {
+        margin: .5em 1em;
+        text-align: center;
+        width: 25%;
+    }
+    
+    th {
+        border: 1px solid #FFF;
+        background-color: $rabo-orange;
+        color: #FFF;
+        padding: 1em;
+        
+        .sortorder {
+            display: inline;
+            
+            &.reverse:after {
+                content: '\25bc';
+            }
+            &:after {
+                content: '\25b2';
+            }
+        }
+    }
+    
+    td {
+        word-wrap: break-word;
+    }
+}

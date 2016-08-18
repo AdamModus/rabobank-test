@@ -1,0 +1,31 @@
+<div csv-uploader change-data="receiveCSV(data)" ></div>
+
+<table id="raboTable" class="rabotable">
+    <tbody>
+    <tr>
+        <th>
+            <button ng-click="sortBy('Firstname')">First Name</button>
+            <span class="sortorder" ng-show="propertyName === 'Firstname'" ng-class="{reverse: reverse}"></span>
+        </th>
+        <th>
+            <button ng-click="sortBy('Surname')">Surname</button>
+            <span class="sortorder" ng-show="propertyName === 'Surname'" ng-class="{reverse: reverse}"></span>
+        </th>
+        <th>
+            <button ng-click="sortBy('Issuecount')">Issue Count</button>
+            <span class="sortorder" ng-show="propertyName === 'Issuecount'" ng-class="{reverse: reverse}"></span>
+        </th>
+        <th>
+            <button ng-click="sortBy('Dateofbirth')">Birth Date</button>
+            <span class="sortorder" ng-show="propertyName === 'Dateofbirth'" ng-class="{reverse: reverse}"></span>
+        </th>
+    </tr>
+
+    <tr ng-repeat="client in clients | orderBy:propertyName:reverse">
+        <td>{{client.Firstname}}</td>
+        <td>{{client.Surname}}</td>
+        <td>{{client.Issuecount}}</td>
+        <td>{{client.Dateofbirth}}</td>
+    </tr>
+    </tbody>
+</table>

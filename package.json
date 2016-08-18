@@ -1,0 +1,29 @@
+{
+  "name": "AdamMode-rabotest",
+  "version": "1.0.0",
+  "description": "Short assignment at Rabobank",
+  "author": "Rafael Fernandes <rafatexfr@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdamModus/rabotest"
+  },
+  "scripts": {
+    "webdriver-start": "webdriver-manager start",
+    "run-server": "gulp",
+    "protractor-tests": "protractor tests/e2e/protractor-conf.js",
+    "e2e-test": "(npm run webdriver-start &) && sleep 2 && (npm run run-server . &) && npm run protractor-tests"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-protractor": "^0.1.4",
+    "gulp-protractor": "^3.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-server-livereload": "^1.8.1",
+    "jasmine-reporters": "^2.2.0",
+    "protractor": "^4.0.3"
+  }
+}
